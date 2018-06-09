@@ -30,6 +30,6 @@
             window.open(r.childNodes[2].firstChild.href)
         }
         base_node.parentNode.insertBefore(r_button, base_node.nextSibling);
-    }, 2000);
+    }, 3000);
 
 })();
