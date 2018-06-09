@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name         Random button AniList
-// @namespace    http://anilist.co
+// @name         AniList Random Button
+// @namespace    https://github.com/MichaelVerdegaal/AniList-Random
 // @version      1.0
-// @description  Get a random button on your Anilist lists.
+// @description  Get a random button on your Anilist lists. To quickly get a random anime or manga. *Note, select the desired category, otherwise it will select from all.
 // @author       Allthemighty
 // @match        https://anilist.co/user/*/animelist
 // @match        https://anilist.co/user/*/mangalist
-// @grant        none
 // ==/UserScript==
 
 (function() {
