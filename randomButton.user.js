@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AniList Random Button
-// @namespace    https://github.com/MichaelVerdegaal/AniList-Random
-// @updateURL    https://github.com/MichaelVerdegaal/AniList-Random/raw/master/randomButton.user.js
+// @namespace    https://github.com/Allthemighty/AniList-Random
+// @updateURL    https://github.com/Allthemighty/AniList-Random/raw/master/randomButton.user.js
 // @version      1.0
 // @description  Get a random button on your Anilist lists. To quickly get a random anime or manga. *Note, select the desired category, otherwise it will select from all.
 // @author       Allthemighty
