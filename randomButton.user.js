@@ -11,7 +11,7 @@
 // ==/UserScript==
 
 (function() {
-    setTimeout(function() {
+    window.onload = function(){
         var base_node = document.getElementsByClassName("section-name")[0];
         var r_button = document.createElement("button");
         r_button.innerHTML = "Surprise me";
@@ -30,6 +30,6 @@
             window.open(r.childNodes[2].firstChild.href)
         }
         base_node.parentNode.insertBefore(r_button, base_node.nextSibling);
-    }, 3000);
-
+};
 })();
+
