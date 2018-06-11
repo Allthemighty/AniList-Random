@@ -2,18 +2,23 @@
 // @name         AniList Random Button
 // @namespace    https://github.com/Allthemighty/AniList-Random
 // @updateURL    https://github.com/Allthemighty/AniList-Random/raw/master/randomButton.user.js
-// @version      1.1
+// @version      1.1.1
 // @description  Get a random button on your Anilist lists. To quickly get a random anime or manga. *Note, select the desired category, otherwise it will select from all.
 // @author       Allthemighty
 // @match        https://anilist.co/user/*/animelist
 // @match        https://anilist.co/user/*/mangalist
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
+// @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @grant        GM_addStyle
 
 // ==/UserScript==
 
-(function() {
-    window.onload = function(){
-        var base_node = document.getElementsByClassName("section-name")[0];
-        var r_button = document.createElement("button");
+waitForKeyElements ("div.content.container", actionFunction);
+
+function actionFunction (jNode) {
+        var base_node = document.getElementsByClassName("section-name")[0],
+            r_button = document.createElement("button"),
+            items = document.getElementsByClassName("entry row");
         r_button.innerHTML = "Surprise me";
         r_button.style.marginLeft = "25px";
         r_button.style.marginBottom = "10px";
@@ -25,11 +30,8 @@
         r_button.style.backgroundColor = "#FFFFFF";
         r_button.style.padding = "2px";
         r_button.onclick = function() {
-            var items = document.getElementsByClassName("entry row");
-            var r = items[Math.floor(Math.random() * items.length)];
-            window.open(r.childNodes[2].firstChild.href)
+            window.open(items[Math.floor(Math.random() * items.length)].childNodes[2].firstChild.href)
         }
         base_node.parentNode.insertBefore(r_button, base_node.nextSibling);
-};
-})();
+}
 
