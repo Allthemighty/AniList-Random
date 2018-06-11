@@ -15,16 +15,13 @@
 var pageURLCheckTimer = setInterval(
     function() {
         if (/mangalist/.test(window.location.href) || /animelist/.test(window.location.href)) {
-            console.log("flag 1: on right page");
             waitForKeyElements("div.content.container", addButton);
             setTimeout(function() {
                 if (!document.getElementById("r_button")) {
-                    console.log("flag 3; button not appearing");
                     addButton();
                 }
             }, 200);
         } else {
-            console.log("flag 2: not on right page");
             if (document.getElementById("r_button")) {
                 document.getElementById("r_button").remove();
             }
